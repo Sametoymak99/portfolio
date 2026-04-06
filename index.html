@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samet | Portfolio & Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-blur"></div>
+    <div class="bg-blur-alt"></div>
+
+    <nav>
+        <a href="#" class="logo">SAMET.</a>
+        <div class="nav-links">
+            <a href="#about">Hakkımda</a>
+            <a href="#projects">Projeler</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">İletişim</a>
+            <button id="theme-toggle" style="background:none; border:1px solid var(--primary); color:var(--primary); padding:0.2rem 0.6rem; border-radius:10px; cursor:pointer; font-size:1.2rem;">🌓</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-badge reveal">AI Developer & Computer Engineer</div>
+        <h1 class="reveal">Building things with <span>code</span></h1>
+        <p class="reveal" id="hero-desc">Yapay zeka sistemleri üzerine uzmanlaşmış, verinin gücünü anlamlı çözümlere dönüştüren bir Bilgisayar Mühendisiyim.</p>
+        <div class="btns reveal">
+            <a href="#projects" class="btn btn-primary">Projelerimi İncele</a>
+            <a href="https://github.com/Sametoymak99" target="_blank" class="btn" style="border: 1px solid var(--primary); margin-left: 1rem;">GitHub Profilim</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">Hakkımda</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>
+                    Merhaba! Ben bir <strong>Bilgisayar Mühendisi</strong> ve <strong>Yapay Zeka Geliştiricisiyim</strong>. 
+                    Teknolojinin sınırlarını zorlamayı, büyük veri setlerinden anlamlı çıkarımlar yapmayı ve otonom karar verebilen sistemler tasarlamayı bir tutku olarak görüyorum.
+                </p>
+                <p>
+                    Akademik altyapımı modern AI kütüphaneleri ve mühendislik disiplinleriyle birleştirerek; doğal dil işleme (NLP), derin öğrenme (Deep Learning) ve veri analitiği konularında projeler geliştiriyorum. 
+                    GitHub'daki "Akıllı Şehir Rota Planlayıcı" ve kapsamlı "Veri Analizi" projelerim, algoritmik düşünce yapımın ve teknik yetkinliklerimin birer yansımasıdır.
+                </p>
+                <div style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; text-align: left;">
+                    <div>
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Çalışma Alanlarım</h4>
+                        <ul style="color: var(--text-muted); padding-left: 1rem;">
+                            <li>Doğal Dil İşleme (NLP)</li>
+                            <li>Görüntü İşleme (Computer Vision)</li>
+                            <li>Büyük Veri Analistliği</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Eğitim & Vizyon</h4>
+                        <ul style="color: var(--text-muted); padding-left: 1rem;">
+                            <li>Bilgisayar Mühendisliği</li>
+                            <li>Otonom Sistemler</li>
+                            <li>Veri Madenciliği</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skill-tags">
+                    <span>Machine Learning</span>
+                    <span>Deep Learning</span>
+                    <span>Python & LLMs</span>
+                    <span>Algorithm Design</span>
+                    <span>Data Engineering</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Öne Çıkan Projeler</h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card" onclick="openDetails('route-planner')">
+                <div class="tag">Python</div>
+                <div class="tag">Algorithms</div>
+                <h3>Akıllı Şehir Rota Planlayıcı</h3>
+                <p>Şehir içi ulaşımı optimize eden, gelişmiş algoritmalarla çalışan rota hesaplama sistemi.</p>
+                <div class="project-tags">
+                    <span class="tag">A* Algorithm</span>
+                    <span class="tag">Dijkstra</span>
+                    <span class="tag">NetworkX</span>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card" onclick="openDetails('data-analysis')">
+                <div class="tag">Python</div>
+                <div class="tag">Pandas</div>
+                <h3>Veri Analizi Kütüphanesi</h3>
+                <p>Büyük veri setlerini işlemek ve görselleştirmek için geliştirilmiş kapsamlı araç seti.</p>
+                <div class="project-tags">
+                    <span class="tag">Matplotlib</span>
+                    <span class="tag">NumPy</span>
+                    <span class="tag">Seaborn</span>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card" onclick="openDetails('dsa')">
+                <div class="tag">Java</div>
+                <div class="tag">Algorithms</div>
+                <h3>DSA Implementations</h3>
+                <p>Veri yapıları ve algoritmaların performans odaklı implementasyonları.</p>
+                <div class="project-tags">
+                    <span class="tag">Sorting</span>
+                    <span class="tag">Graphs</span>
+                    <span class="tag">Trees</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2 class="section-title">Blog & Notlar</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+            <div class="project-card" style="display: block;" onclick="openDetails('blog-perf')">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                   <span class="tag">Teknoloji</span>
+                   <span style="font-size: 0.8rem; color: var(--text-muted);">Mart 2024</span>
+                </div>
+                <h4>Yazılımda Performans: Altın Kurullar</h4>
+                <p>Karmaşık algoritmaların zaman ve bellek kullanımını nasıl optimize edebiliriz? Kendi projelerimden örneklerle.</p>
+                <div style="margin-top: 1rem; color: var(--primary); font-weight: 600;">Devamını Oku &rarr;</div>
+            </div>
+            <div class="project-card" style="display: block;" onclick="openDetails('blog-data')">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                   <span class="tag">Python</span>
+                   <span style="font-size: 0.8rem; color: var(--text-muted);">Şubat 2024</span>
+                </div>
+                <h4>Veri Analizi Neden Önemlidir?</h4>
+                <p>Pandas ve NumPy kullanarak veri dünyasına ilk adımı atın. Neden her yazılımcı biraz veri bilmeli?</p>
+                <div style="margin-top: 1rem; color: var(--primary); font-weight: 600;">Devamını Oku &rarr;</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center;">
+        <h2 class="section-title">İletişim</h2>
+        <p style="margin-bottom: 2rem; color: var(--text-muted); font-size: 1.2rem;">Yeni bir proje fikrin mi var? Benimle iletişime geçmekten çekinme.</p>
+        <div style="display: flex; justify-content: center; gap: 1.5rem;">
+            <a href="mailto:samet@example.com" class="btn btn-primary">E-posta Gönder</a>
+            <a href="https://github.com/Sametoymak99" target="_blank" class="btn" style="border:1px solid rgba(255,255,255,0.1)">GitHub'da Git</a>
+        </div>
+    </section>
+
+    <!-- Modal for Project Details -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeDetails()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Samet Oymak. Tüm hakları saklıdır.</p>
+        <div style="margin-top: 1rem; display: flex; justify-content: center; gap: 1rem;">
+            <a href="https://github.com/Sametoymak99" target="_blank" style="color: var(--text-muted); text-decoration:none;">GitHub</a>
+            <a href="#" style="color: var(--text-muted); text-decoration:none;">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
